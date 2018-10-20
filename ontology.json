@@ -1,0 +1,114 @@
+[{
+	"fields":[{
+		"name":"name",
+		"multiplicity": "single_valued",
+		"type": "string",
+		"description": "a word or phrase which refers to the object."
+	},
+	{
+		"name": "type",
+		"multiplicity": "single_valued",
+		"type": "string",
+		"description": "the type of which all other types are instances."
+	}],
+	"namespace": "cekg",
+	"name": "type.object",
+	"parent": null
+},
+{
+	"fields": [{
+		"name": "address",
+		"multiplicity": "single_valued",
+		"type": "location.address",
+		"description": "the address of the company."
+	},
+	{
+		"name": "contact",
+		"multiplicity": "multi_valued",
+		"type": "contact.contact",
+		"description": "the contact of the company."
+	},
+	{
+		"name": "offical_social_media",
+		"multiplicity": "multi_valued",
+		"type": "internet.social_media"
+	},
+	{
+		"name": "investment_relationship",
+		"multiplicity": "single_valued",
+		"type": "investment.relationship",
+		"description": "the investment relationship of the company."
+	}],
+	"namespace": "cekg",
+	"name": "organization.company",
+	"parent": "type.object"
+},
+{
+	"fields": [{
+		"name": "city",
+		"multiplicity": "single_valued",
+		"type": "string",
+		"description": "the city attribute of the location."
+	},
+	{
+		"name": "district",
+		"multiplicity": "single_valued",
+		"type": "string",
+		"description": "the district attribute of the location."
+	},
+	{
+		"name": "street",
+		"multiplicity": "single_valued",
+		"type": "string",
+		"description": "the street attribute of the location."
+	},
+	{
+		"name": "building_number",
+		"multiplicity": "single_valued",
+		"type": "string",
+		"description": "the building number of the location."
+	}],
+	"namespace": "cekg",
+	"name": "location.address",
+	"parent": "type.object"
+},
+{
+	"fields": [{
+		"name": "post_code",
+		"multiplicity": "single_valued",
+		"type": "string",
+		"description": "the post code attribute of the contact."
+	},
+	{
+		"name": "telephone",
+		"multiplicity": "single_valued",
+		"type": "string",
+		"description": "the telephone attribute of the contact."
+	},
+	{
+		"name": "fox",
+		"multiplicity": "single_valued",
+		"type": "string",
+		"description": "the fox attribute of the contact."
+	}],
+	"namespace": "cekg",
+	"name": "contact.contact",
+	"parent": "type.object"
+},
+{
+	"fields": [{
+		"name": "type",
+		"multiplicity": "single_valued",
+		"type": "string",
+		"description": "the type of the social media. wechat, sina weibo, qq, websit, etc."
+	},
+	{
+		"name": "link",
+		"multiplicity": "single_valued",
+		"type": "string",
+		"description": "the link of the social media."
+	}],
+	"namespace": "cekg",
+	"name": "internet.social_media",
+	"parent": "type.object"
+}]
